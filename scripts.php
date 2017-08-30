@@ -16,11 +16,20 @@ function redirect($url)
   if (!headers_sent())  
   {  
     /* If headers not yet sent => do php redirect */  
-    header(.$url);  
+    header('Location: '.$url);  
     exit;  
   }  
   else  
   {
-  
+    /* If headers already sent => do javaScript redirect */  
+    echo '<script type="text/javascript">';  
+    echo 'window.location.href="'.$url.'";';  
+    echo '</script>';  
+
+    /* If javaScript is disabled => do html redirect */  
+    echo '<noscript>';  
+    echo '<meta http-equiv="refresh" content="0; url='.$url.'" />';  
+    echo '</noscript>';  
+    exit;  
   }  
 }  
