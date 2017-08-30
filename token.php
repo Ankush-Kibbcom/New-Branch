@@ -28,6 +28,8 @@ $signature = base64_encode($signature);
 //concatenating the header, the payload and the signature to obtain the JWT token
 $token = "$header.$payload.$signature";
 echo $token;
+?> 
+<?php
 include_once('scripts.php');  
 strip_php_extension();
-?> 
+?>
