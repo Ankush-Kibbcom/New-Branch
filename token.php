@@ -1,6 +1,4 @@
  <?php
-include_once('scripts.php');
-strip_php_extension();
   $header = [
            'typ' => 'JWT',
 		   'alg' => 'HS256'
