@@ -1,9 +1,9 @@
-<?php
-$key = 'Octaviasecretkey';
-
-$header = [
+include_once('scripts.php');
+strip_php_extension();
+ <?php
+  $header = [
            'typ' => 'JWT',
-		   'alg' => 'RS256'
+		   'alg' => 'HS256'
 		  ];
 
 $header = json_encode($header);		
@@ -29,7 +29,3 @@ $signature = base64_encode($signature);
 $token = "$header.$payload.$signature";
 echo $token;
 ?> 
-<?php
-include_once('scripts.php');  
-strip_php_extension();
-?>
