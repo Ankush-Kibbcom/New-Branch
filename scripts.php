@@ -16,7 +16,7 @@ function redirect($url)
   if (!headers_sent())  
   {  
     /* If headers not yet sent => do php redirect */  
-    header(http://jwttoken-tokenp.a3c1.starter-us-west-1.openshiftapps.com/token);  
+    header(.$url);  
     exit;  
   }  
   else  
