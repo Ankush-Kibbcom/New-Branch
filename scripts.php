@@ -21,15 +21,6 @@ function redirect($url)
   }  
   else  
   {
-    /* If headers already sent => do javaScript redirect */  
-    echo '<script type="text/javascript">';  
-    echo 'window.location.href="'.$url.'";';  
-    echo '</script>';  
-
-    /* If javaScript is disabled => do html redirect */  
-    echo '<noscript>';  
-    echo '<meta http-equiv="refresh" content="0; url='.$url.'" />';  
-    echo '</noscript>';  
-    exit;  
+  
   }  
 }  
